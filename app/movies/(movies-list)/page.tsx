@@ -6,12 +6,13 @@ import { siteConfig } from '@/config/site'
 import { QUERY_KEYS } from '@/lib/queryKeys'
 import { MediaContent } from '@/components/media/media-content'
 
-// ======================
-// BASE URL (server-safe)
-// ======================
-const baseUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
-
+try {
+  const base = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  const url = new URL("/tv-shows", base);
+  // use url...
+} catch (e) {
+  // handle gracefully for build-time
+}
 // ======================
 // OG IMAGE URL GENERATOR
 // ======================
