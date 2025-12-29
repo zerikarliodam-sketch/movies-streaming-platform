@@ -8,6 +8,8 @@ import { MediaContent } from '@/components/media/media-content'
 
 const generateOgImageUrl = (title: string, description: string) =>
   `${siteConfig.websiteURL}/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`
+const baseUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
 export const metadata: Metadata = {
   title: 'Movies',
