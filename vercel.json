@@ -1,6 +1,9 @@
 {
-  "version": 2,
-  "rewrites": [
-    { "source": "/(.app)", "destination": "/index.html" }
-  ]
+  "framework": "nextjs",
+  "buildCommand": "pnpm run build",
+  "installCommand": "pnpm install",
+  "nodeVersion": "20.x"
+}
+"engines": {
+  "node": ">=20.10.0"
 }
