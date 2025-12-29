@@ -12,7 +12,7 @@ const generateOgImageUrl = (title: string, description: string) =>
 export const metadata: Metadata = {
   title: 'Movies',
   description: 'Discover and explore popular movies, trending releases, and all-time favorites.',
-  metadataBase: new URL('/movies', process.env.NEXT_PUBLIC_BASE_URL),
+  metadataBase: new URL('/movies', baseUrl), process.env.NEXT_PUBLIC_BASE_URL),
   openGraph: {
     title: 'Movies - ' + siteConfig.name,
     description: 'Discover and explore popular movies, trending releases, and all-time favorites.',
